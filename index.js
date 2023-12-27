@@ -13,6 +13,9 @@ btn_nav.addEventListener('click', () => {
 });
 
 
-let p_skill1 = document.getElementById('p_skill1')
-let p_skill2 = document.getElementById('p_skill2')
-p_skill2.style.height = `${p_skill1.clientHeight}px`;
+const updatePSize = () => {
+    let p_skill1 = document.getElementById('p_skill1')
+    let p_skill2 = document.getElementById('p_skill2')
+    p_skill2.style.height = `${p_skill1.clientHeight}px`;
+}
+updatePSize();
