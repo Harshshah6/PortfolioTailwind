@@ -19,3 +19,17 @@ const updatePSize = () => {
     p_skill2.style.height = `${p_skill1.clientHeight}px`;
 }
 updatePSize();
+
+const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-visible')
+        } else {
+            entry.target.classList.remove('scroll-visible')
+        }
+    })
+},);
+
+const hiddenElements = document.querySelectorAll(".scroll-hidden")
+
+hiddenElements.forEach((ele)=>intersectionObserver.observe(ele));

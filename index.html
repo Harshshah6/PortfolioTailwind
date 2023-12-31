@@ -13,7 +13,7 @@
     <title>Portfolio using Tailwind</title>
 </head>
 
-<body class="bg-white duration-300 overflow-x-scroll">
+<body class="bg-white duration-300 overflow-x-hidden">
     <nav
         class="bg-slate-300 w-full h-min px-6 py-2 md:py-4 flex justify-between md:justify-around items-center sticky top-0 left-0 border-b-slate-400 border-b-[1px] z-[100]">
         <h1 class="font-bold text-2xl md:text-3xl cursor-pointer"><a href="#">Portfolio</a></h1>
@@ -30,25 +30,31 @@
         </ul>
         <p class="hidden md:block button-blue">
             Login</p>
-        <div class="md:hidden flex items-center" id="btn_nav"><i class='bx bx-menu font-bold text-2xl text-black cursor-pointer'></i>
+        <div class="md:hidden flex items-center" id="btn_nav"><i
+                class='bx bx-menu font-bold text-2xl text-black cursor-pointer'></i>
         </div>
     </nav>
 
-    <div id="nav_drawer" class="nav-drawer md:hidden" hidden >
+    <div id="nav_drawer" class="nav-drawer z-50 md:hidden" hidden>
         <ul class="gap-4">
-            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a href="#">Home</a></li>
-            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a href="#about">About</a>
+            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a
+                    href="#">Home</a></li>
+            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a
+                    href="#about">About</a>
             </li>
-            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a href="#skills">Skills</a>
+            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a
+                    href="#skills">Skills</a>
             </li>
-            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a href="#projects">Projects</a></li>
-            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a href="#footer">Contact
+            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a
+                    href="#projects">Projects</a></li>
+            <li onclick="btn_nav.click();" class="text-lg text-black cursor-pointer hover:text-blue-600 duration-300"><a
+                    href="#footer">Contact
                     Me</a></li>
         </ul>
     </div>
 
-    <div id="home" class="w-full min-h-screen bg-slate-300 p-5 lg:px-[15vw] md:px-[10vw] flex items-center ">
-        <div class="w-full flex justify-evenly flex-col md:flex-row items-center">
+    <div id="home" class="w-full min-h-screen bg-slate-300 p-5 lg:px-[15vw] md:px-[10vw] flex items-center">
+        <div class="w-full flex justify-evenly flex-col md:flex-row items-center scroll-hidden">
             <div class="justify-center flex flex-col">
                 <img src="https://harshshah6.github.io/Portfolio/assets/images/logo.png"
                     class="w-56 h-56 md:w-80 md:h-80" alt="">
@@ -68,7 +74,7 @@
     </div>
 
     <div id="about" class="w-full min-h-screen bg-white p-4 lg:px-[15vw] md:px-[10vw] flex items-center">
-        <div class="w-full flex justify-evenly flex-col md:flex-row items-center">
+        <div class="w-full flex justify-evenly flex-col md:flex-row items-center scroll-hidden">
             <div class="justify-center flex flex-col">
                 <h1 class="font-bold text-4xl md:text-5xl text-blue-600">About Me</h1>
                 <p class="text-xl md:text-2xl text-slate-600 mt-2">LEGENDARY STREAMER</p>
@@ -92,24 +98,24 @@
                 class="hidden md:block w-56 h-56 md:w-80 md:h-80">
         </div>
     </div>
-    </div>
 
     <div id="skills" class="w-full min-h-screen bg-slate-300 p-4 lg:px-[15vw] md:px-[10vw]">
-        <div class="md:flex md:flex-row flex-wrap gap-2">
+        <div class="md:flex md:flex-row flex-wrap gap-2 scroll-hidden">
             <div class="md:w-full">
                 <h1 class="font-bold text-3xl text-blue-600 text-center">What I Do</h1>
-                <div class="my-4 flex flex-col gap-2 w-full md:flex-row">
+                <div class="my-4 flex flex-col gap-2 w-full md:flex-row ">
                     <div
-                        class="md:w-1/2 flex flex-col items-center border border-slate-400 rounded-lg md:flex-row  duration-300 ">
+                        class="md:w-1/2 flex flex-col items-center border border-slate-400 rounded-lg md:flex-row  duration-300">
                         <!-- <ion-icon name="logo-android" class="text-5xl md:text-7xl w-[4.5rem] h-[4.5rem]  text-black p-3 rounded-md"></ion-icon> -->
                         <img src="./images/logoandroid.svg"
-                            class="object-center aspect-square md:text-7xl w-16 h-16 text-black p-1 md:p-3 rounded-md" alt=""
-                            srcset="">
+                            class="object-center aspect-square md:text-7xl w-16 h-16 text-black p-1 md:p-3 rounded-md"
+                            alt="" srcset="">
                         <div class="flex flex-col justify-between p-4 leading-normal">
                             <h5
                                 class="mb-2 text-lg md:text-2xl text-center md:text-left font-bold tracking-tight text-gray-900">
                                 Android App Development</h5>
-                            <p id="p_skill1" class="mb-3 font-normal text-gray-500">Android Application Development using JAVA or
+                            <p id="p_skill1" class="mb-3 font-normal text-gray-500">Android Application Development
+                                using JAVA or
                                 KOTLIN as primary language and c++ for native library support. I also develop online
                                 server connected apps using Firebase or MySQL.</p>
                             <button class="button-blue capitalize"> See more</button>
@@ -119,12 +125,14 @@
                         class="md:w-1/2 flex flex-col items-center border border-slate-400 rounded-lg md:flex-row  duration-300">
                         <!-- <ion-icon name="laptop-outline" class="text-5xl md:text-7xl text-black p-5 rounded-md"></ion-icon> -->
                         <img src="./images/laptopoutline.svg"
-                            class="object-center aspect-square md:text-7xl w-16 h-16 text-black p-1 md:p-3 rounded-md" alt="">
+                            class="object-center aspect-square md:text-7xl w-16 h-16 text-black p-1 md:p-3 rounded-md"
+                            alt="">
                         <div class="flex flex-col justify-between p-4 leading-normal">
                             <h5
                                 class="mb-2 text-lg md:text-2xl text-center md:text-left font-bold tracking-tight text-gray-900">
                                 Website Development</h5>
-                            <p id="p_skill2" class="mb-3 font-normal text-gray-500">Website Development using HTML, CSS, JS and
+                            <p id="p_skill2" class="mb-3 font-normal text-gray-500">Website Development using HTML, CSS,
+                                JS and
                                 frameworks like Tailwind, Bootstrap, NodeJS, ReactJS and PHP or JAVA for backend.</p>
                             <button class="button-blue capitalize">See More</button>
                         </div>
@@ -209,35 +217,57 @@
 
     <div id="projects" class="w-full min-h-screen bg-white p-4 lg:px-[15vw] md:px-[10vw]">
         <h1 class="font-bold text-2xl md:text-3xl text-blue-600 text-center">Some Hand Picked Projects</h1>
-        <div class="mt-8 flex flex-wrap gap-2 w-full h-full justify-">
-            
-            <div class="border-2 border-slate-500 rounded-md overflow-hidden w-auto md:w-min md:hover:scale-105 duration-300 aspect-auto">
-                <img src="https://lh3.googleusercontent.com/mF-L68uOJlCd06ksqOOx1tEtS81Lm5YMGRhYs-xuCbNusUtqJvXSBUcsH1HG3Bo4EXA" class="w-full aspect-video md:min-w-[18rem] bg-slate-400" alt="...">
+        <div class="mt-8 flex flex-wrap gap-2 w-full h-full justify-around scroll-hidden">
+
+            <div
+                class="border-2 border-slate-500 rounded-md overflow-hidden w-auto md:w-min md:hover:scale-105 duration-300 aspect-auto">
+                <img src="https://lh3.googleusercontent.com/mF-L68uOJlCd06ksqOOx1tEtS81Lm5YMGRhYs-xuCbNusUtqJvXSBUcsH1HG3Bo4EXA"
+                    class="w-full aspect-video md:min-w-[18rem] bg-slate-400" alt="...">
                 <div class="p-4">
                     <h5 class="font-bold text-xl">Playbalance Converter</h5>
-                    <p class="text-slate-500 text-sm md:min-h-[80px]">This app is used to convert the unused google play balance into an e-money. You receive the money through UPI into any banking app.</p>
-                    <a target="_blank" rel="noopener noreferrer" href="#" class="w-full block"></a><div class="button-blue capitalize tracking-wider mt-2">View On Github</div></a>
-                    <a target="_blank" rel="noopener noreferrer" href="#" class="w-full block"></a><div class="button-blue capitalize tracking-wider mt-2">View On Playstore</div></a>
+                    <p class="text-slate-500 text-sm md:min-h-[80px]">This app is used to convert the unused google play
+                        balance into an e-money. You receive the money through UPI into any banking app.</p>
+                    <a target="_blank" rel="noopener noreferrer" href="#" class="w-full block"></a>
+                    <div class="button-blue capitalize tracking-wider mt-2">View On Github</div></a>
+                    <a target="_blank" rel="noopener noreferrer" href="#" class="w-full block"></a>
+                    <div class="button-blue capitalize tracking-wider mt-2">View On Playstore</div></a>
                 </div>
             </div>
 
-            <div class="border-2 border-slate-500 rounded-md overflow-hidden w-auto md:w-min md:hover:scale-105 duration-300 aspect-auto">
-                <img src="https://lh3.googleusercontent.com/mF-L68uOJlCd06ksqOOx1tEtS81Lm5YMGRhYs-xuCbNusUtqJvXSBUcsH1HG3Bo4EXA" class="w-full aspect-video md:min-w-[18rem] bg-slate-400" alt="...">
+            <div
+                class="border-2 border-slate-500 rounded-md overflow-hidden w-auto md:w-min md:hover:scale-105 duration-300 aspect-auto">
+                <img src="https://lh3.googleusercontent.com/mF-L68uOJlCd06ksqOOx1tEtS81Lm5YMGRhYs-xuCbNusUtqJvXSBUcsH1HG3Bo4EXA"
+                    class="w-full aspect-video md:min-w-[18rem] bg-slate-400" alt="...">
                 <div class="p-4">
                     <h5 class="font-bold text-xl">NotesHolder</h5>
-                    <p class="text-slate-500 text-sm md:min-h-[80px]">This app is used to hold an list of notes and also quick checkbox todo list. All data is stored internally for privacy of the notes and todo list.</p>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Harshshah6/NotesHolder" class="w-full block"><div class="button-blue capitalize tracking-wider mt-2">View On Github</div></a>
-                    <a target="_blank" rel="noopener noreferrer" href="./" class="w-full block"><div class="button-blue capitalize tracking-wider mt-2">View On Playstore</div></a>
+                    <p class="text-slate-500 text-sm md:min-h-[80px]">This app is used to hold an list of notes and also
+                        quick checkbox todo list. All data is stored internally for privacy of the notes and todo list.
+                    </p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Harshshah6/NotesHolder"
+                        class="w-full block">
+                        <div class="button-blue capitalize tracking-wider mt-2">View On Github</div>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="./" class="w-full block">
+                        <div class="button-blue capitalize tracking-wider mt-2">View On Playstore</div>
+                    </a>
                 </div>
             </div>
 
-            <div class="border-2 border-slate-500 rounded-md overflow-hidden w-auto md:w-min md:hover:scale-105 duration-300 aspect-auto">
+            <div
+                class="border-2 border-slate-500 rounded-md overflow-hidden w-auto md:w-min md:hover:scale-105 duration-300 aspect-auto">
                 <img src="./images/portfolio1.png" class="w-full aspect-video md:min-w-[18rem] bg-slate-400" alt="...">
                 <div class="p-4">
                     <h5 class="font-bold text-xl">Portfolio</h5>
-                    <p class="text-slate-500 text-sm md:min-h-[80px]">This portfolio was build using pure HTML CSS and vanilla JS. This was build by me when i started learning JS after learning HTML and CSS.</p>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Harshshah6/Portfolio" class="w-full block"><div class="button-blue capitalize tracking-wider mt-2">View On Github</div></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://harshshah6.github.io/Portfolio" class="w-full block"><div class="button-blue capitalize tracking-wider mt-2">View Live Web</div></a>
+                    <p class="text-slate-500 text-sm md:min-h-[80px]">This portfolio was build using pure HTML CSS and
+                        vanilla JS. This was build by me when i started learning JS after learning HTML and CSS.</p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Harshshah6/Portfolio"
+                        class="w-full block">
+                        <div class="button-blue capitalize tracking-wider mt-2">View On Github</div>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://harshshah6.github.io/Portfolio"
+                        class="w-full block">
+                        <div class="button-blue capitalize tracking-wider mt-2">View Live Web</div>
+                    </a>
                 </div>
             </div>
 
@@ -275,32 +305,43 @@
         </form>
     </div> -->
 
-    <footer id="footer" class="bg-slate-500 w-full min-h-full px-4 md:px-12 py-4 border border-t-stone-400">
+    <footer id="footer" class="bg-slate-500 w-full min-h-full px-4 md:px-12 py-4 border border-t-stone-400 scroll-hidden">
         <div class="flex justify-between gap-4 flex-wrap">
             <div class="">
                 <h1 class="font-bold text-white text-lg md:text-2xl">Quick Links</h1>
                 <ul class="mt-1">
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="#home">Home</a></li>
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="#about">About</a></li>
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="#skills">Skills</a></li>
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="#projects">Projects</a></li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="#home">Home</a></li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="#about">About</a></li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="#skills">Skills</a></li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="#projects">Projects</a></li>
                 </ul>
             </div>
 
             <div class="">
                 <h1 class="font-bold text-white text-lg md:text-2xl">Social Media Links</h1>
                 <ul class="mt-1">
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="https://www.youtube.com/@LEGENDARYSTREAMER" target="_blank">Youtube</a></li>
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="https://t.me/legendary_streamer_official" target="_blank">Telegram</a></li>
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="https://www.instagram.com/legendary_streamer_official" target="_blank">Instagram</a></li>
-                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a href="https://www.github.com/harshshah6" target="_blank">Github</a></li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="https://www.youtube.com/@LEGENDARYSTREAMER" target="_blank">Youtube</a></li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="https://t.me/legendary_streamer_official" target="_blank">Telegram</a></li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="https://www.instagram.com/legendary_streamer_official" target="_blank">Instagram</a>
+                    </li>
+                    <li class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 w-min "><a
+                            href="https://www.github.com/harshshah6" target="_blank">Github</a></li>
                 </ul>
             </div>
-            
+
             <div class="flex flex-col">
                 <h1 class="font-bold text-white text-lg md:text-2xl">Contact / Address</h1>
-                <a href="mailto:harshsandeep23@gmail.com" class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 mt-1">harshsandeep23@gmail.com</a>
-                <a href="mailto:sshv10101010@gmail.com" class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300">sshv10101010@gmail.com</a>
+                <a href="mailto:harshsandeep23@gmail.com"
+                    class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300 mt-1">harshsandeep23@gmail.com</a>
+                <a href="mailto:sshv10101010@gmail.com"
+                    class="text-slate-300 cursor-pointer hover:text-blue-400 duration-300">sshv10101010@gmail.com</a>
                 <p class="text-slate-300 cursor-pointer mt-3">India, karnataka, Banglore-72</p>
                 <!-- <p class="text-slate-300 cursor-pointer mt-3">+90 999 888 7777</p> -->
                 <!-- <p class="text-slate-300 cursor-pointer">+90 444 555 6666</p> -->

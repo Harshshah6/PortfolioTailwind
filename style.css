@@ -628,6 +628,17 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.scroll-hidden{
+  opacity: 0;
+  transform: translateY(6vh);
+  transition: all .5s linear, alpha 1s ease, color 0s ease;
+}
+
+.scroll-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .sticky {
   position: sticky;
 }
@@ -638,6 +649,10 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .z-\[100\] {
@@ -808,10 +823,6 @@ video {
   flex-wrap: wrap;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
 }
@@ -824,12 +835,12 @@ video {
   justify-content: space-between;
 }
 
-.justify-evenly {
-  justify-content: space-evenly;
+.justify-around {
+  justify-content: space-around;
 }
 
-.justify-items-center {
-  justify-items: center;
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-2 {
@@ -844,8 +855,8 @@ video {
   overflow: hidden;
 }
 
-.overflow-x-scroll {
-  overflow-x: scroll;
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .scroll-smooth {
@@ -1161,41 +1172,19 @@ video {
     padding: 0.75rem;
   }
 
-  .md\:p-\[\] {
-    padding: ;
-  }
-
-  .md\:p-\[20\%\] {
-    padding: 20%;
-  }
-
-  .md\:p-\[20vw\] {
-    padding: 20vw;
-  }
-
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .md\:px-\[20vw\] {
-    padding-left: 20vw;
-    padding-right: 20vw;
-  }
-
-  .md\:px-\[\] {
-    padding-left: ;
-    padding-right: ;
-  }
-
   .md\:px-\[10vw\] {
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .md\:text-left {
@@ -1235,11 +1224,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:px-\[20vw\] {
-    padding-left: 20vw;
-    padding-right: 20vw;
-  }
-
   .lg\:px-\[15vw\] {
     padding-left: 15vw;
     padding-right: 15vw;
